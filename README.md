@@ -1,43 +1,52 @@
-# Mintlify Starter Kit
+# Fonify.co Dokümantasyonu
 
-Use the starter kit to get your docs deployed and ready to customize.
+Fonify.co için kapsamlı geliştirici dokümantasyonu.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+Bu dokümantasyon, Fonify.co platformunu kullanmak, entegre etmek ve özelleştirmek için gereken tüm bilgileri içerir.
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+## İçerik
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+Dokümantasyon şunları içerir:
 
-## Development
+- **Başlangıç Rehberleri**: Hızlı başlangıç ve kurulum kılavuzları
+- **Platform Özellikleri**: Fonify.co'nun sunduğu özellikler ve kullanım senaryoları
+- **API Referansı**: Detaylı API dokümantasyonu ve örnekler
+- **Sektörel Çözümler**: Farklı sektörler için özelleştirilmiş kullanım örnekleri
+- **Entegrasyon Rehberleri**: Üçüncü parti servislere entegrasyon
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+## Yerel Geliştirme
 
-```
+Dokümantasyon değişikliklerinizi yerel ortamda önizlemek için [Mintlify CLI](https://www.npmjs.com/package/mint)'ı kurun. Kurulum için aşağıdaki komutu kullanın:
+
+```bash
 npm i -g mint
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+Dokümantasyon kök dizininde (`docs.json` dosyasının bulunduğu yerde) aşağıdaki komutu çalıştırın:
 
-```
+```bash
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+Yerel önizlemenizi `http://localhost:3000` adresinde görüntüleyin.
 
-## Publishing changes
+## Değişiklikleri Yayınlama
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+Değişiklikleriniz, varsayılan branch'e push edildikten sonra otomatik olarak production ortamına deploy edilir.
 
-## Need help?
+## Yardıma mı İhtiyacınız Var?
 
-### Troubleshooting
+### Sorun Giderme
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+- Geliştirme ortamı çalışmıyorsa: En son CLI sürümüne sahip olduğunuzdan emin olmak için `mint update` komutunu çalıştırın.
+- Bir sayfa 404 hatası veriyorsa: Geçerli bir `docs.json` dosyası içeren bir klasörde çalıştığınızdan emin olun.
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+### Kaynaklar
+
+- [Fonify.co Website](https://fonify.co)
+- [Mintlify Dokümantasyonu](https://mintlify.com/docs)
+- [Destek](mailto:info@fonify.co)
+
+## Hakkında
+
+Fonify.co, **DefSoft Bilişim Teknolojileri A.Ş.** tarafından geliştirilen AI destekli sesli asistan platformudur.

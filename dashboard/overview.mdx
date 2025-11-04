@@ -1,0 +1,87 @@
+---
+title: "Dashboard Genel Bakış"
+description: "Fonify.co dashboard özellikleri ve gezinme rehberi"
+---
+
+<Note>
+  Bu bölüm, `app.fonify.co` uygulamasının Dashboard deneyimini açıklar. Sayfa ve modüller, sol kenar çubuğundaki menü üzerinden erişilebilir.
+</Note>
+
+## Temel Kavramlar
+
+- **Agent (Yapay Zekâ Asistanı)**: Telefon görüşmelerini yöneten, senaryolarla konuşma akışı özelleştirilebilen sesli asistan.
+- **Phone Numbers**: Satın aldığınız veya içeri aktardığınız numaralar. Arama yönlendirme ve arayan kimliği ayarları burada yönetilir.
+- **Knowledge Base**: Belgeler ve içeriklerle agent'ların bilgi tabanı.
+- **Analytics**: Çağrı performansı, dönüşüm ve kalite metrikleri.
+- **WhatsApp**: WhatsApp Business entegrasyonu ve mesaj akışları.
+
+## Sol Menü Yapısı
+
+<Columns cols={2}>
+  <Card title="Genel Analiz" icon="chart-line" href="/dashboard/analytics">
+    Toplam çağrılar, ortalama süre, başarı oranı ve coğrafi dağılım.
+  </Card>
+  <Card title="Çağrı Geçmişi" icon="clock" href="/dashboard/call-history">
+    Tüm çağrıların kayıtları, özetler ve dinleme.
+  </Card>
+  <Card title="Agent'lar" icon="robot" href="/dashboard/agents">
+    Agent oluşturma, düzenleme ve konuşma akışları.
+  </Card>
+  <Card title="Telefon Numaraları" icon="phone" href="/dashboard/phone-numbers">
+    Numara satın alma/aktarım ve arama ayarları.
+  </Card>
+  <Card title="Knowledge Bases" icon="book" href="/dashboard/knowledge-bases">
+    Belgelerle bilgi tabanı oluşturma ve senkronizasyon.
+  </Card>
+  <Card title="Toplu Arama" icon="list-check" href="/dashboard/batch-call">
+    CSV ile çoklu arama başlatma ve durum izleme.
+  </Card>
+  <Card title="WhatsApp" icon="whatsapp" href="/dashboard/whatsapp">
+    WhatsApp Business kurulumu ve mesaj akışları.
+  </Card>
+  <Card title="Ayarlar" icon="gear" href="/dashboard/settings">
+    Fatura, API anahtarları ve takım üyeleri.
+  </Card>
+</Columns>
+
+## Hızlı Başlangıç (Dashboard)
+
+<Steps>
+  <Step title="Agent oluşturun">
+    Sol menüden Agent'lar → Yeni Agent. İsim, dil, ses seçin. Gerekirse giriş senaryosunu ekleyin.
+  </Step>
+  <Step title="Numara ekleyin">
+    Telefon Numaraları → Numara Satın Al veya İçe Aktar. Arayan kimliği ve yönlendirmeleri ayarlayın.
+  </Step>
+  <Step title="Bilgi tabanı bağlayın">
+    Knowledge Bases → Yeni → PDF/URL yükleyin. Agent ile eşleştirin.
+  </Step>
+  <Step title="Test edin">
+    Agent sayfasında Ses Testi/Önizleme ile kısa senaryo testi yapın, ardından gerçek çağrı başlatın.
+  </Step>
+  <Step title="Analiz edin">
+    Analytics ve Çağrı Geçmişi'nden sonuçları inceleyin, metriklere göre iyileştirin.
+  </Step>
+</Steps>
+
+## Roller ve Erişim
+
+- **Admin**: Tüm modülleri yönetir, faturalandırma ve takım erişimi dahil.
+- **Editor**: Agent, içerik ve kampanya yönetir.
+- **Viewer**: Sadece raporlar ve çağrı kayıtlarını görüntüler.
+
+## SSS
+
+<AccordionGroup>
+  <Accordion title="Agent konuşma kalitesi nasıl artar?">
+    Net hedef, doğru bilgi tabanı, tutarlı senaryo ve yeterli çağrı örnekleriyle iterasyon önerilir.
+  </Accordion>
+  <Accordion title="Çağrı kayıtları nerede?">
+    Çağrı Geçmişi içinde detay sayfasında kayıt ve döküm (varsa) yer alır.
+  </Accordion>
+  <Accordion title="API anahtarımı nerede bulurum?">
+    Ayarlar → Geliştirici bölümünde API anahtarları görüntülenir/yenilenir.
+  </Accordion>
+</AccordionGroup>
+
+

@@ -1,80 +1,111 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: "Hızlı Başlangıç"
+description: "Fonify.co platformunu kullanmaya başlamak için adım adım rehber"
 ---
 
-## Get started in three steps
+## Üç Adımda Başlayın
 
-Get your documentation site running locally and make your first customization.
+Fonify.co dokümantasyonunu yerel ortamınızda çalıştırın ve ilk özelleştirmenizi yapın.
 
-### Step 1: Set up your local environment
+### Adım 1: Yerel Ortamınızı Kurun
 
 <AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
+  <Accordion icon="copy" title="Dokümantasyonu yerel ortama klonlayın">
+    GitHub repository'sini yerel bilgisayarınıza klonlayın:
+
+    ```bash
+    git clone https://github.com/DefSoft-AI/fonify.co.git
+    cd fonify.co/docs
+    ```
+
+    Değişiklikleri yapıp önizlemek için repository'yi yerel ortamınıza klonlamanız gerekmektedir.
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
+  <Accordion icon="rectangle-terminal" title="Önizleme sunucusunu başlatın">
+    1. Mintlify CLI'ı yükleyin: `npm i -g mint`
+    2. Docs dizinine gidin: `cd docs`
+    3. Geliştirme sunucusunu başlatın: `mint dev`
+    4. Tarayıcınızda `http://localhost:3000` adresini açın
+
+    <Tip>Dosyaları düzenledikçe önizleme otomatik olarak güncellenir!</Tip>
   </Accordion>
 </AccordionGroup>
 
-### Step 2: Deploy your changes
+### Adım 2: Özelleştirme Yapın
 
 <AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+  <Accordion icon="palette" title="Site adını ve renklerini güncelleyin">
+    İlk değişiklik olarak site adını ve renklerini güncelleyelim:
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+    1. Editörünüzde `docs.json` dosyasını açın
+    2. `"name"` alanını proje adınızla değiştirin
+    3. `"colors"` bölümünü markanıza uygun şekilde güncelleyin
+    4. Kaydedin ve değişiklikleri `http://localhost:3000` adresinde görün
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
+    <Tip>Ana rengi değiştirerek anında farkı görebilirsiniz!</Tip>
+  </Accordion>
+  <Accordion icon="map" title="Navigasyon yapısını düzenleyin">
+    Dokümantasyonunuzun navigasyon yapısını özelleştirin:
+
+    1. `docs.json` dosyasında `navigation` bölümünü bulun
+    2. Sayfa gruplarını ve sayfaları düzenleyin
+    3. Gerektiğinde yeni sayfalar ekleyin veya mevcut sayfaları kaldırın
+
+    <Tip>Kullanıcılarınızın ihtiyaç duydukları bilgileri kolayca bulmalarını sağlayın.</Tip>
   </Accordion>
 </AccordionGroup>
 
-### Step 3: Go live
+### Adım 3: Yayınlayın
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
+<Accordion icon="rocket" title="Değişikliklerinizi yayınlayın">
+  1. Değişikliklerinizi commit edin
+  2. GitHub'a push yapın
+  3. Dokümantasyonunuz otomatik olarak güncellenecektir!
+
+  ```bash
+  git add .
+  git commit -m "Dokümantasyon güncellendi"
+  git push
+  ```
 </Accordion>
 
-## Next steps
-
-Now that you have your docs running, explore these key features:
+## Sonraki Adımlar
 
 <CardGroup cols={2}>
 
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
+<Card title="Dashboard Genel Bakış" icon="gauge" href="/dashboard/overview">
+  Modülleri ve hızlı başlangıç adımlarını inceleyin.
 </Card>
 
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
+<Card title="Agent'lar" icon="robot" href="/dashboard/agents">
+  İlk agentınızı oluşturun ve test edin.
 </Card>
 
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
+<Card title="Telefon Numaraları" icon="phone" href="/dashboard/phone-numbers">
+  Numara ekleyin ve yönlendirmeleri ayarlayın.
 </Card>
 
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
+<Card title="Çağrı Geçmişi" icon="clock" href="/dashboard/call-history">
+  İlk çağrılarınızı izleyin ve kayıtları kontrol edin.
+</Card>
+
+</CardGroup>
+
+## Fonify.co Platformu Hakkında
+
+Fonify.co hakkında daha fazla bilgi edinmek için:
+
+<CardGroup cols={2}>
+
+<Card title="Website" icon="globe" href="https://fonify.co">
+  Ana web sitemizi ziyaret edin.
+</Card>
+
+<Card title="İletişim" icon="envelope" href="mailto:info@fonify.co">
+  Sorularınız için bize ulaşın.
 </Card>
 
 </CardGroup>
 
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  **Yardıma mı ihtiyacınız var?** [Tam dokümantasyonu](https://fonify.co/docs) inceleyin veya info@fonify.co adresinden bize ulaşın.
 </Note>

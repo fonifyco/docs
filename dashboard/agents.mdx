@@ -1,0 +1,40 @@
+---
+title: "Agent'lar"
+description: "Agent oluşturma, düzenleme, LLM/voice seçimi ve test etme"
+---
+
+## Agent Oluşturma
+
+<Steps>
+  <Step title="Yeni Agent">
+    Agent'lar → Yeni Agent. İsim, dil, timezone ve varsayılan ses/LLM seçin.
+  </Step>
+  <Step title="Konuşma Akışı">
+    Selamlama, doğrulama, soru-cevap, kapanış bloklarını netleştirin. Gerekliyse koşullu dallar ekleyin.
+  </Step>
+  <Step title="Knowledge Base Bağlama">
+    Agent → Bilgi Kaynakları sekmesinden ilgili knowledge base'leri ekleyin.
+  </Step>
+  <Step title="Test & Yayın">
+    Ses önizleme ve test çağrısı yapın. Beklenen sonuç alındığında kaydedin.
+  </Step>
+</Steps>
+
+## LLM ve Ses Ayarları
+
+- **LLM**: Yanıt kalitesi ve hız dengesine göre model seçin. Uzun cevaplar için streaming önerilir.
+- **Ses**: Doğal (neural) sesleri tercih edin. Hız, ton ve duraklama ayarlarını test ederek finalize edin.
+
+## İleri Seçenekler
+
+- **Fonksiyon Çağırma**: CRM/ERP gibi sistemlerle entegrasyon için fonksiyon çağırma kancaları.
+- **Doğrulama Adımları**: OTP veya basit sorularla arayan doğrulama.
+- **Hata Toleransı**: Anlamama/tekrar etme eşikleri ve fallback metinleri.
+
+## En İyi Uygulamalar
+
+- Kısa cümleler, tek soru kuralı ve net kapanışlar.
+- Yanıt süresini < 1.5s hedefleyin; uzun sessizliği azaltın.
+- Gerçek çağrı örnekleriyle haftalık iterasyon yapın.
+
+

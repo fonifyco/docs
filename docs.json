@@ -1,20 +1,20 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Fonify.co",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#8B5CF6",
+    "light": "#A78BFA",
+    "dark": "#7C3AED"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Rehber",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Başlangıç",
             "pages": [
               "index",
               "quickstart",
@@ -22,63 +22,39 @@
             ]
           },
           {
-            "group": "Customization",
+            "group": "Dashboard",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "dashboard/overview",
+              "dashboard/analytics",
+              "dashboard/call-history",
+              "dashboard/agents",
+              "dashboard/phone-numbers",
+              "dashboard/knowledge-bases",
+              "dashboard/batch-call",
+              "dashboard/whatsapp",
+              "dashboard/settings"
             ]
           }
         ]
       }
+      
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Website",
+          "href": "https://fonify.co",
+          "icon": "globe"
         },
         {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "href": "http://fonify.co/blog",
           "icon": "newspaper"
+        },
+        {
+          "anchor": "Destek",
+          "href": "https://www.fonify.co/tr/contact",
+          "icon": "envelope"
         }
       ]
     }
@@ -90,33 +66,28 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Destek",
+        "href": "https://www.fonify.co/tr/contact"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Platform",
+      "href": "https://app.fonify.co"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/fonifyco",
+      "youtube": "https://youtube.com/@fonifyco",
+      "instagram": "https://instagram.com/fonifyco",
+      "linkedin": "https://linkedin.com/company/fonifyco"
     }
   }
 }

@@ -1,94 +1,123 @@
 ---
-title: 'Development'
-description: 'Preview changes locally to update your docs'
+title: 'Geliştirme Ortamı'
+description: 'Değişikliklerinizi yerel ortamda önizleyerek dokümantasyonu güncelleyin'
 ---
 
 <Info>
-  **Prerequisites**:
-  - Node.js version 19 or higher
-  - A docs repository with a `docs.json` file
+  **Gereksinimler**:
+  - Node.js sürüm 19 veya üzeri
+  - `docs.json` dosyası içeren bir dokümantasyon repository'si
 </Info>
 
-Follow these steps to install and run Mintlify on your operating system.
+İşletim sisteminizde Mintlify'ı kurmak ve çalıştırmak için bu adımları izleyin.
 
 <Steps>
-<Step title="Install the Mintlify CLI">
+<Step title="Mintlify CLI'ı Kurun">
 
 ```bash
 npm i -g mint
 ```
+
+Mintlify CLI'ı global olarak yükleyin. Bu araç, dokümantasyonunuzu yerel ortamda önizlemenizi sağlar.
+
 </Step>
 
-<Step title="Preview locally">
+<Step title="Yerel Önizleme Başlatın">
 
-Navigate to your docs directory where your `docs.json` file is located, and run the following command:
+`docs.json` dosyasının bulunduğu docs dizinine gidin ve aşağıdaki komutu çalıştırın:
 
 ```bash
+cd docs
 mint dev
 ```
 
-A local preview of your documentation will be available at `http://localhost:3000`.
+Dokümantasyonunuzun yerel önizlemesi `http://localhost:3000` adresinde kullanılabilir olacaktır.
 
 </Step>
 </Steps>
 
-## Custom ports
+## Özel Port Kullanımı
 
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. For example, to run Mintlify on port 3333, use this command:
+Varsayılan olarak Mintlify 3000 portunu kullanır. `--port` bayrağını kullanarak Mintlify'ın çalışacağı portu özelleştirebilirsiniz. Örneğin, Mintlify'ı 3333 portunda çalıştırmak için:
 
 ```bash
 mint dev --port 3333
 ```
 
-If you attempt to run Mintlify on a port that's already in use, it will use the next available port:
+Halihazırda kullanımda olan bir portta Mintlify'ı çalıştırmaya çalışırsanız, bir sonraki kullanılabilir portu kullanacaktır:
 
 ```md
-Port 3000 is already in use. Trying 3001 instead.
+Port 3000 zaten kullanımda. Bunun yerine 3001 deneniyor.
 ```
 
-## Mintlify versions
+## Mintlify Sürümleri
 
-Please note that each CLI release is associated with a specific version of Mintlify. If your local preview does not align with the production version, please update the CLI:
+Her CLI sürümünün belirli bir Mintlify sürümüyle ilişkili olduğunu unutmayın. Yerel önizlemeniz production sürümüyle uyuşmuyorsa, lütfen CLI'ı güncelleyin:
 
 ```bash
-npm mint update
+mint update
 ```
 
-## Validating links
+## Link Doğrulama
 
-The CLI can assist with validating links in your documentation. To identify any broken links, use the following command:
+CLI, dokümantasyonunuzdaki linkleri doğrulamada yardımcı olabilir. Kırık linkleri tespit etmek için aşağıdaki komutu kullanın:
 
 ```bash
 mint broken-links
 ```
 
-## Deployment
+Bu komut, dokümantasyonunuzdaki tüm linkleri tarar ve çalışmayan linkleri size bildirir.
 
-If the deployment is successful, you should see the following:
+## Dağıtım (Deployment)
+
+Dağıtım başarılı olduğunda aşağıdakine benzer bir onay mesajı görmelisiniz:
 
 <Frame>
-  <img src="/images/checks-passed.png" alt="Screenshot of a deployment confirmation message that says All checks have passed." style={{ borderRadius: '0.5rem' }} />
+  <img src="/images/checks-passed.png" alt="Tüm kontrollerin başarıyla tamamlandığını gösteren dağıtım onay mesajı ekran görüntüsü" style={{ borderRadius: '0.5rem' }} />
 </Frame>
 
-## Code formatting
+## Kod Formatlama
 
-We suggest using extensions on your IDE to recognize and format MDX. If you're a VSCode user, consider the [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) for syntax highlighting, and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for code formatting.
+IDE'nizde MDX'i tanımak ve formatlamak için eklentiler kullanmanızı öneririz. VSCode kullanıcısıysanız, sözdizimi vurgulama için [MDX VSCode eklentisi](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx)'ni ve kod formatlama için [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)'ı göz önünde bulundurun.
 
-## Troubleshooting
+## Sorun Giderme
 
 <AccordionGroup>
-  <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
+  <Accordion title='Hata: "sharp" modülü darwin-arm64 runtime kullanılarak yüklenemedi'>
 
-    This may be due to an outdated version of node. Try the following:
-    1. Remove the currently-installed version of the CLI: `npm remove -g mint`
-    2. Upgrade to Node v19 or higher.
-    3. Reinstall the CLI: `npm i -g mint`
+    Bu, eski bir node sürümünden kaynaklanıyor olabilir. Şunları deneyin:
+    1. Şu anda yüklü olan CLI sürümünü kaldırın: `npm remove -g mint`
+    2. Node v19 veya üzerine yükseltin
+    3. CLI'ı yeniden yükleyin: `npm i -g mint`
   </Accordion>
 
-  <Accordion title="Issue: Encountering an unknown error">
-  
-    Solution: Go to the root of your device and delete the `~/.mintlify` folder. Then run `mint dev` again.
+  <Accordion title="Sorun: Bilinmeyen bir hatayla karşılaşma">
+
+    Çözüm: Cihazınızın kök dizinine gidin ve `~/.mintlify` klasörünü silin. Ardından `mint dev` komutunu tekrar çalıştırın.
+  </Accordion>
+
+  <Accordion title="Port 3000 kullanımda hatası">
+
+    Eğer 3000 portu kullanımdaysa, ya başka bir port belirtin:
+    ```bash
+    mint dev --port 3333
+    ```
+    Ya da 3000 portunu kullanan uygulamayı kapatın.
   </Accordion>
 </AccordionGroup>
 
-Curious about what changed in the latest CLI version? Check out the [CLI changelog](https://www.npmjs.com/package/mintlify?activeTab=versions).
+## Fonify.co Projesi için Geliştirme
+
+Fonify.co web sitesi Next.js ile geliştirilmiştir. Web sitesini yerel ortamda çalıştırmak için:
+
+```bash
+# Ana proje dizininde
+npm install
+npm run dev
+```
+
+Web sitesi `http://localhost:3000` adresinde çalışacaktır. Dokümantasyon için `docs/` dizininde çalışın.
+
+## Değişiklik Güncellemeleri
+
+En son CLI sürümünde nelerin değiştiğini merak ediyor musunuz? [CLI değişiklik günlüğü](https://www.npmjs.com/package/mintlify?activeTab=versions)'ne göz atın.

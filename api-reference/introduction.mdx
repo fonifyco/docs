@@ -1,28 +1,67 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: 'API Referansı'
+description: 'Fonify.co API dokümantasyonu ve endpoint örnekleri'
 ---
 
 <Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
+  Bu bölüm, Fonify.co platformunun API yapısını ve kullanılabilir endpoint'leri göstermek için hazırlanmıştır.
 </Note>
 
-## Welcome
+## Hoş Geldiniz
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+Fonify.co API'si ile AI destekli sesli asistan sisteminizi programatik olarak yönetebilirsiniz. API, RESTful standartlarını takip eder ve JSON formatında veri alışverişi yapar.
+
+API dokümantasyonu iki şekilde oluşturulabilir: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) ve [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). Bu dokümantasyon için aşağıdaki OpenAPI spesifikasyonunu kullanıyoruz.
 
 <Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
+  title="Fonify.co API Endpoints"
+  icon="phone"
+  href="https://github.com/DefSoft-AI/fonify.co/blob/main/docs/api-reference/openapi.json"
 >
-  View the OpenAPI specification file
+  OpenAPI spesifikasyon dosyasını görüntüleyin
 </Card>
 
-## Authentication
+## Temel Bilgiler
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+### Base URL
+
+Tüm API istekleri aşağıdaki base URL üzerinden yapılır:
+
+```
+https://api.fonify.co/v1
+```
+
+### İçerik Tipi
+
+Tüm istekler ve yanıtlar JSON formatındadır:
+
+```
+Content-Type: application/json
+```
+
+## Kimlik Doğrulama (Authentication)
+
+Tüm API endpoint'leri Bearer token kullanılarak kimlik doğrulaması gerektirir. API anahtarınızı almak için [Fonify.co platformu](https://fonify.co)'na giriş yapın.
+
+### Bearer Token Kullanımı
+
+Her istekte `Authorization` header'ında Bearer token'ınızı gönderin:
+
+```bash
+Authorization: Bearer YOUR_API_KEY
+```
+
+### Örnek İstek
+
+```bash
+curl -X GET https://api.fonify.co/v1/agents \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json"
+```
+
+### OpenAPI Spesifikasyonu
+
+API'miz OpenAPI spesifikasyonunda aşağıdaki şekilde tanımlanmıştır:
 
 ```json
 "security": [
@@ -31,3 +70,32 @@ All API endpoints are authenticated using Bearer tokens and picked up from the s
   }
 ]
 ```
+
+## Rate Limiting
+
+API kullanımı için aşağıdaki limitler geçerlidir:
+
+- **Ücretsiz Plan**: Dakikada 60 istek
+- **Pro Plan**: Dakikada 300 istek
+- **Enterprise Plan**: Özel limitler
+
+Rate limit aşıldığında `429 Too Many Requests` hatası alırsınız.
+
+## Hata Kodları
+
+API aşağıdaki HTTP durum kodlarını kullanır:
+
+| Kod | Açıklama |
+|-----|----------|
+| 200 | Başarılı istek |
+| 201 | Kaynak başarıyla oluşturuldu |
+| 400 | Hatalı istek parametreleri |
+| 401 | Kimlik doğrulama hatası |
+| 403 | Erişim yetkisi yok |
+| 404 | Kaynak bulunamadı |
+| 429 | Rate limit aşıldı |
+| 500 | Sunucu hatası |
+
+## Destek
+
+API kullanımı hakkında sorularınız için [info@fonify.co](mailto:info@fonify.co) adresinden bize ulaşabilirsiniz.
