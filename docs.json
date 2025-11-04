@@ -3,17 +3,15 @@
   "theme": "mint",
   "name": "Fonify.co",
   "colors": {
-    "primary": "#8B5CF6",
-    "light": "#A78BFA",
-    "dark": "#7C3AED"
+    "primary": "#25D366",
+    "light": "#128C7E",
+    "dark": "#1ea854"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
-      {
+    "tabs": [{
         "tab": "Rehber",
-        "groups": [
-          {
+        "groups": [{
             "group": "Başlangıç",
             "pages": [
               "index",
@@ -37,11 +35,10 @@
           }
         ]
       }
-      
+
     ],
     "global": {
-      "anchors": [
-        {
+      "anchors": [{
           "anchor": "Website",
           "href": "https://fonify.co",
           "icon": "globe"
@@ -64,12 +61,10 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Destek",
-        "href": "https://www.fonify.co/tr/contact"
-      }
-    ],
+    "links": [{
+      "label": "Destek",
+      "href": "https://www.fonify.co/tr/contact"
+    }],
     "primary": {
       "type": "button",
       "label": "Platform",
